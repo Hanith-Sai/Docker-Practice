@@ -3,7 +3,8 @@
 
 #Install dependencies
 	Run apt-get update -y
-	Run apt-get install -y git curl apache2 php5 libapache2-mod-php5 php5-mycrypt php5-mysql
+	#Run apt-get install -y git curl apache2 php5 libapache2-mod-php5 php5-mycrypt php5-mysql
+	RUn apt-get install -y git curl apache2 php5
 
 #Install app
 	Run rm -rf /var/www/*
@@ -18,4 +19,6 @@
 
 	Expose 80
 
-	CMD["/usr/sbin/apache2", "-D", "FOREGROUND"]
+	#CMD["/usr/sbin/apache2","-D","FOREGROUND"]
+
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
